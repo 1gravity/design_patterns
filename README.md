@@ -1,1 +1,1 @@
-This is a Kotlin implementation of all (mostlty Gang of Four design) patterns: https://en.wikipedia.org/wiki/Design_Patterns.
+This is a Kotlin implementation of all (mostly Gang of Four design) patterns: https://en.wikipedia.org/wiki/Design_Patterns.
