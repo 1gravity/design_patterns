@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 /*
  * The @see com.onegravity.designpatterns.factory.PizzaFactory has already an example of the factory method
- * (the createPizza method). Nevertheless here a simple example of the second factory design pattern.
+ * (the createPizza method). Nevertheless here's a simple example of the "other" factory design pattern.
  */
 
 interface Joke {
