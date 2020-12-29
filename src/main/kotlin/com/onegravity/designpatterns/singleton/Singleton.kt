@@ -1,4 +1,4 @@
-package com.onegravity.singleton
+package com.onegravity.designpatterns.singleton
 
 /**
  * Singleton's are part of the Kotlin language. It can't get any simpler than this
