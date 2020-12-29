@@ -13,7 +13,7 @@ object ItalianPizza : Pizza {
 }
 
 object AmercianPizza : Pizza {
-    override fun create() = println("Creating American an pizza")
+    override fun create() = println("Creating American pizza")
     override fun bake() = println("Baking pizza slow and steady")
     override fun eat() = println("Eating pizza with thick crust")
 }
@@ -34,10 +34,13 @@ object AmercianPizzaFactory: PizzaFactory() {
  * Simple constructor dependency injection to decouple the client (Person) from all concrete pizza objects.
  */
 class Person(private val factory: PizzaFactory) {
-    fun makeAndEatPizza() = factory.createPizza().run {
-        create()
-        bake()
-        eat()
+    fun makeAndEatPizza() {
+        factory.createPizza()
+            .run {
+                create()
+                bake()
+                eat()
+            }
     }
 }
 
