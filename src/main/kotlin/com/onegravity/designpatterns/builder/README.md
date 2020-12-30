@@ -34,7 +34,7 @@ build {
     salad = Salad("Lettuce")
 }.eat()
 ```
-####Comparison
+### Comparison
 Building the object is comparable for all three variants (5 lines of code).<br>
 With the classic builder pattern approach we need to create an extra builder class (more code) -> higher memory usage (in-memory duplication of all arguments).<br>
 With the DSL approach we need to create a build function (just one line of code), but gain the ability to add more logic into the build function. E.g. we could do
