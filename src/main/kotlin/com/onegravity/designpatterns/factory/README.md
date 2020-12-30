@@ -11,3 +11,5 @@ I would argue that a good implementation of this pattern decouples the client fr
 
 We use a factory method to create instances of classes instead of instantiating them directly. The implementation of the factory method can be overridden to create different instances of the class.   
 
+### Use Cases
+The purpose of the two patterns is to insulate a client from object creation and thus decouple it from the concrete objects themselves. The client only  knows the interface those objects implement (it's coded against their interfaces).
