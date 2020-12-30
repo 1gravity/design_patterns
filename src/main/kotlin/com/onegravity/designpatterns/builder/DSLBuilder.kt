@@ -23,7 +23,7 @@ class DSLMenu {
     /**
      * If you want an immutable object we can consider the DSLMenu the builder class for the Menu class.
      */
-    fun build(menu: DSLMenu) = Menu(menu.fish, menu.meat, menu.pasta, menu.rice, menu.veggie, menu.salad)
+    fun immutable(menu: DSLMenu) = Menu(menu.fish, menu.meat, menu.pasta, menu.rice, menu.veggie, menu.salad)
 }
 
 /**
@@ -58,6 +58,6 @@ fun main() {
     build {
         veggie = Veggie("Broccoli")
         salad = Salad("Iceberg")
-        build(this)
+        immutable(this)
     }.eat()
 }
