@@ -19,15 +19,15 @@ object AmercianPizza : Pizza {
 }
 
 abstract class PizzaFactory {
-    abstract fun createPizza(): Pizza
+    abstract fun create(): Pizza
 }
 
 object ItalianPizzaFactory: PizzaFactory() {
-    override fun createPizza() = ItalianPizza
+    override fun create() = ItalianPizza
 }
 
 object AmercianPizzaFactory: PizzaFactory() {
-    override fun createPizza() = AmercianPizza
+    override fun create() = AmercianPizza
 }
 
 /**
@@ -35,7 +35,7 @@ object AmercianPizzaFactory: PizzaFactory() {
  */
 class Person(private val factory: PizzaFactory) {
     fun makeAndEatPizza() {
-        factory.createPizza()
+        factory.create()
             .run {
                 create()
                 bake()
