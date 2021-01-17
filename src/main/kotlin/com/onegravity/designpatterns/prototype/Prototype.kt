@@ -29,8 +29,12 @@ object Provolone: Cheese()
 abstract class Pizza(val crust: Crust, val sauce: Sauce, val cheese: Cheese)  {
     abstract fun bake()
     abstract fun eat()
-    abstract fun clone(): Pizza
     override fun toString(): String = javaClass.simpleName
+
+    /**
+     * The all important clone method...
+     */
+    abstract fun clone(): Pizza
 }
 
 /**
@@ -88,8 +92,10 @@ class LocalPizzaStore : PizzaStore() {
     override fun getPizza(crust: Crust, sauce: Sauce, cheese: Cheese): Pizza {
         val key = crust.toString() + sauce.toString() + cheese.toString()
         return pizzas[key]?.apply {
+            // pizza prototype exists -> make a clone
             println("cloning $this ")
         } ?: run {
+            // pizza prototype doesn't exist yet -> create one from scratch and clone it
             val newPizza = if (crust is Thick) AmercianPizza(sauce, cheese) else ItalianPizza(sauce, cheese)
             pizzas[key] = newPizza
             println("creating new $newPizza")
