@@ -31,9 +31,9 @@ object AmercianPizzaFactory: PizzaFactory() {
 }
 
 /**
- * Simple constructor dependency injection to decouple the client (Person) from all concrete pizza objects.
+ * Simple constructor dependency injection to decouple the client (HungryPerson) from all concrete pizza objects.
  */
-class Person(private val factory: PizzaFactory) {
+class HungryPerson(private val factory: PizzaFactory) {
     fun makeAndEatPizza() {
         factory.create()
             .run {
@@ -45,6 +45,6 @@ class Person(private val factory: PizzaFactory) {
 }
 
 fun main() {
-    Person(ItalianPizzaFactory).makeAndEatPizza()
-    Person(AmercianPizzaFactory).makeAndEatPizza()
+    HungryPerson(ItalianPizzaFactory).makeAndEatPizza()
+    HungryPerson(AmercianPizzaFactory).makeAndEatPizza()
 }

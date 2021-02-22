@@ -25,7 +25,7 @@ abstract class Actor(private val firstName: String, private val lastName: String
 object Brad : Actor("Brad", "Pitt"), JokeFactory {
     private val flag = AtomicBoolean(true)
     private val joke1 = object: Joke {
-        override fun get() = "Schwarzenegger has it long, Brad Pitt short, Madonna does not have it and the Pope does not use it. What is it?\nA surname."
+        override fun get() = "Schwarzenegger has a long one, Brad Pitt has a short one, Madonna does not have one and the Pope does not use his. What is it?\nA surname."
     }
     private val joke2 = object: Joke {
         override fun get() = "This woman said that I reminded her of Brad Pitt.\nI was flattered, until she mentioned it was when he played Benjamin Button."
